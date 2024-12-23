@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Personality Quiz 1",
+    "description": "This is the first personality quiz.",
+    "estimatedTime": "10 minutes",
+    "ageRange": "12-18",
+    "image": "/img/quiz1.jpeg"
+  },
+  {
+    "id": 2,
+    "title": "Personality Quiz 2",
+    "description": "This is the second personality quiz.",
+    "estimatedTime": "15 minutes",
+    "ageRange": "18-25",
+    "image": "/img/quiz2.jpeg"    
+  },
+  {
+    "id": 3,
+    "title": "Personality Quiz 3",
+    "description": "This is the third personality quiz.",
+    "estimatedTime": "20 minutes",
+    "ageRange": "25-35",
+    "image":"/img/quiz3.jpeg"
+  }
+]
