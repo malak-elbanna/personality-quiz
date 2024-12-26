@@ -8,10 +8,13 @@ import Quiz2 from './pages/Quiz2';
 import Quiz3 from './pages/Quiz3';
 import Gallery from './pages/Gallery';
 import Success from './pages/Success';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
     <Router>
+      <Navbar />
       <Routes>
         {/* Home Page */}
         <Route path="/" element={<Home />} />
@@ -26,6 +29,7 @@ const App = () => {
         <Route path="/quiz/3" element={<Quiz3 />} />
         <Route path="/success" element={<Success />}/>
       </Routes>
+      <Footer />
     </Router>
   );
 }
