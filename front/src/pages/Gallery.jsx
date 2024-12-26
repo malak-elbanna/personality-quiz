@@ -104,4 +104,4 @@ const Gallery = () => {
 };
 
 export default Gallery;
->>>>>>> 60e9a03552971eefc7852c677083cad65cd13b20
+
