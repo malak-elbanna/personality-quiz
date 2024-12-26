@@ -7,13 +7,10 @@ import Quiz2 from './pages/Quiz2';
 import Quiz3 from './pages/Quiz3';
 import Gallery from './pages/Gallery';
 import Success from './pages/Success';
-
 import Navbar from './components/Navbar';
-
-
 import SignUp from './pages/SignUp';
-
 import Footer from './components/Footer';
+import AboutUs from './pages/AboutUs';
 
 
 const App = () => {
@@ -29,6 +26,7 @@ const App = () => {
 
         {/* Quiz Collection */}
         <Route path="/collection" element={<QuizCollection />} />
+        <Route path="/about" element={<AboutUs />} />
         
         {/* Quizzes */}
         <Route path="/quiz/1" element={<Quiz1 />} />
