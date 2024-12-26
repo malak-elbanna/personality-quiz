@@ -1,5 +1,4 @@
 import Navbar from '../components/Navbar'; 
-import Footer from '../components/Footer';
 
 const SignUp = () => {
   return (
@@ -10,20 +9,12 @@ const SignUp = () => {
       {/* Sign Up Section */}
       <section className="bg-white py-16 flex-grow">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-semibold text-purple-700 mb-4">Sign Up</h2>
+          <h2 className="text-4xl font-semibold text-purple-700 mb-4">Sign in</h2>
           <p className="text-xl text-purple-600 mb-8">
             Join us today and start exploring your personality!
           </p>
           <form className="max-w-md mx-auto">
-            <div className="mb-4">
-              <label className="block text-left text-purple-700 mb-2" htmlFor="name">Name</label>
-              <input 
-                type="text" 
-                id="name" 
-                className="w-full px-3 py-2 border border-purple-300 rounded" 
-                placeholder="Enter your name" 
-              />
-            </div>
+           
             <div className="mb-4">
               <label className="block text-left text-purple-700 mb-2" htmlFor="email">Email</label>
               <input 
