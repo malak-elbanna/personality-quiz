@@ -1,7 +1,11 @@
+import React from 'react';
+
 
 const Quiz2 = () => {
   return (
-    <div>Quiz2</div>
+    <div>
+      <h1>Quiz 2</h1>
+    </div>
   )
 }
 

@@ -1,7 +1,11 @@
+import React, { useState } from "react";
+import QuizJSON1 from "../data/quiz1.json";
 
 const Quiz1 = () => {
   return (
-    <div>Quiz1</div>
+    <div>
+      <h1>Quiz 1</h1>
+    </div>
   )
 }
 

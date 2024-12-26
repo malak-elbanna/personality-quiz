@@ -1,0 +1,82 @@
+[
+    {
+        "number": 1,
+        "question": "What is your favorite way to spend your free time?",
+        "a": "Reading books",
+        "b": "Playing video games",
+        "c": "Hanging out with friends",
+        "d": "Trying new hobbies"
+    },
+    {
+        "number": 2,
+        "question": "How do you handle conflicts with your friends?",
+        "a": "Talk it out calmly",
+        "b": "Avoid them until it blows over",
+        "c": "Seek advice from others",
+        "d": "Confront them directly"
+    },
+    {
+        "number": 3,
+        "question": "Which school subject do you enjoy the most?",
+        "a": "Math",
+        "b": "Art",
+        "c": "Physical Education",
+        "d": "Science"
+    },
+    {
+        "number": 4,
+        "question": "How do you prepare for exams?",
+        "a": "Create a detailed study plan",
+        "b": "Study the night before",
+        "c": "Revise in a group",
+        "d": "Review only the key points"
+    },
+    {
+        "number": 5,
+        "question": "If you could be any animal, which would you choose?",
+        "a": "Dolphin",
+        "b": "Lion",
+        "c": "Owl",
+        "d": "Dog"
+    },
+    {
+        "number": 6,
+        "question": "How do you feel about trying new activities?",
+        "a": "Excited and eager",
+        "b": "Nervous but willing",
+        "c": "Reluctant but curious",
+        "d": "Prefer sticking to what I know"
+    },
+    {
+        "number": 7,
+        "question": "When faced with a challenge, what do you do?",
+        "a": "Seek help from others",
+        "b": "Try to solve it on my own",
+        "c": "Break it into smaller tasks",
+        "d": "Avoid it and hope it resolves itself"
+    },
+    {
+        "number": 8,
+        "question": "What kind of movies do you enjoy the most?",
+        "a": "Adventure",
+        "b": "Comedy",
+        "c": "Drama",
+        "d": "Sci-fi"
+    },
+    {
+        "number": 9,
+        "question": "How would your best friends describe you?",
+        "a": "Kind and caring",
+        "b": "Fun and outgoing",
+        "c": "Quiet and thoughtful",
+        "d": "Brave and bold"
+    },
+    {
+        "number": 10,
+        "question": "If you could travel anywhere, where would you go?",
+        "a": "A bustling city",
+        "b": "A tropical beach",
+        "c": "A quiet countryside",
+        "d": "A historical site"
+    }
+]

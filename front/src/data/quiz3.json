@@ -1,0 +1,82 @@
+[
+    {
+        "number": 1,
+        "question": "How do you define success in life?",
+        "a": "Financial stability",
+        "b": "Personal happiness",
+        "c": "Strong relationships",
+        "d": "Career achievements"
+    },
+    {
+        "number": 2,
+        "question": "What do you enjoy doing after work?",
+        "a": "Exercising",
+        "b": "Watching TV or movies",
+        "c": "Spending time with family",
+        "d": "Working on hobbies"
+    },
+    {
+        "number": 3,
+        "question": "How do you approach big decisions?",
+        "a": "Research thoroughly before deciding",
+        "b": "Trust my instincts",
+        "c": "Discuss with close friends or family",
+        "d": "Weigh the pros and cons"
+    },
+    {
+        "number": 4,
+        "question": "How do you like to spend your vacation time?",
+        "a": "Relaxing and unwinding",
+        "b": "Exploring new places",
+        "c": "Visiting family or friends",
+        "d": "Learning something new"
+    },
+    {
+        "number": 5,
+        "question": "How do you manage stress?",
+        "a": "Exercise or meditate",
+        "b": "Talk to someone I trust",
+        "c": "Distract myself with entertainment",
+        "d": "Plan and tackle the source of stress"
+    },
+    {
+        "number": 6,
+        "question": "What is your ideal way to celebrate your birthday?",
+        "a": "A small, intimate gathering",
+        "b": "A big party with everyone",
+        "c": "A solo day of self-care",
+        "d": "A fun adventure"
+    },
+    {
+        "number": 7,
+        "question": "Which of these hobbies would you enjoy the most?",
+        "a": "Gardening",
+        "b": "Cooking",
+        "c": "Painting",
+        "d": "Learning a new language"
+    },
+    {
+        "number": 8,
+        "question": "How do you usually set your goals?",
+        "a": "Break them into smaller steps",
+        "b": "Set ambitious, long-term goals",
+        "c": "Go with the flow",
+        "d": "Prioritize based on current needs"
+    },
+    {
+        "number": 9,
+        "question": "What type of books or media do you enjoy?",
+        "a": "Self-help or motivational",
+        "b": "Thrillers or mysteries",
+        "c": "Historical or documentaries",
+        "d": "Science fiction or fantasy"
+    },
+    {
+        "number": 10,
+        "question": "What do you think defines a fulfilling life?",
+        "a": "Building strong relationships",
+        "b": "Achieving personal dreams",
+        "c": "Making a difference in the world",
+        "d": "Living with balance and peace"
+    }
+]

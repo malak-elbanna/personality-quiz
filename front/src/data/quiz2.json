@@ -1,0 +1,82 @@
+[
+    {
+        "number": 1,
+        "question": "What motivates you to work hard?",
+        "a": "Achieving personal goals",
+        "b": "Recognition from others",
+        "c": "Financial rewards",
+        "d": "Passion for what I do"
+    },
+    {
+        "number": 2,
+        "question": "How do you spend your weekends?",
+        "a": "Catching up on rest",
+        "b": "Exploring new places",
+        "c": "Hanging out with friends",
+        "d": "Working on personal projects"
+    },
+    {
+        "number": 3,
+        "question": "What type of career appeals to you most?",
+        "a": "Creative and artistic",
+        "b": "Practical and hands-on",
+        "c": "Academic and research-based",
+        "d": "Entrepreneurial"
+    },
+    {
+        "number": 4,
+        "question": "How do you handle criticism?",
+        "a": "Take it as constructive feedback",
+        "b": "Feel upset but reflect on it later",
+        "c": "Brush it off",
+        "d": "Challenge it if I disagree"
+    },
+    {
+        "number": 5,
+        "question": "What is your preferred way of learning?",
+        "a": "Hands-on experience",
+        "b": "Reading and studying",
+        "c": "Attending workshops",
+        "d": "Watching tutorials"
+    },
+    {
+        "number": 6,
+        "question": "How do you stay organized?",
+        "a": "Use a planner or calendar",
+        "b": "Keep mental notes",
+        "c": "Make daily to-do lists",
+        "d": "Organize only when necessary"
+    },
+    {
+        "number": 7,
+        "question": "Which type of music resonates with you?",
+        "a": "Pop",
+        "b": "Rock",
+        "c": "Classical",
+        "d": "Electronic"
+    },
+    {
+        "number": 8,
+        "question": "What is your favorite type of travel experience?",
+        "a": "Backpacking adventures",
+        "b": "Luxury resorts",
+        "c": "Cultural explorations",
+        "d": "Road trips"
+    },
+    {
+        "number": 9,
+        "question": "How do you prefer to spend time with friends?",
+        "a": "Deep conversations",
+        "b": "Casual hangouts",
+        "c": "Attending events or parties",
+        "d": "Collaborating on projects"
+    },
+    {
+        "number": 10,
+        "question": "What do you value most in a relationship?",
+        "a": "Loyalty",
+        "b": "Humor",
+        "c": "Supportiveness",
+        "d": "Shared interests"
+    }
+]
