@@ -7,13 +7,12 @@ import Quiz2 from './pages/Quiz2';
 import Quiz3 from './pages/Quiz3';
 
 import Success from './pages/Success';
-import SignUp from './pages/SignUp';
+
 import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+
 
 import SignUp from './pages/SignUp';
 
-import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
 
