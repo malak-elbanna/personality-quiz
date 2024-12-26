@@ -13,10 +13,10 @@ const App = () => {
       <Route path="/" element={<Home/>} />
       
         
-      </Routes>  
+      </Routes>
     
     
-    </Router>
+  </Router>
   );
 }
 
