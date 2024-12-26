@@ -6,8 +6,14 @@ import Home from './pages/Home';
 import Quiz1 from './pages/Quiz1';
 import Quiz2 from './pages/Quiz2';
 import Quiz3 from './pages/Quiz3';
-import Gallery from './pages/Gallery';
+
 import Success from './pages/Success';
+
+import SignUp from './pages/SignUp';
+
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+
 
 const App = () => {
   return (
