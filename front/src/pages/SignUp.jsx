@@ -1,11 +1,7 @@
-import Navbar from '../components/Navbar'; 
-import Footer from '../components/Footer';
 
 const SignUp = () => {
   return (
     <div className="flex flex-col min-h-screen bg-purple-100 text-gray-800 font-sans">
-      {/* Navbar */}
-      <Navbar />
 
       {/* Sign Up Section */}
       <section className="bg-white py-16 flex-grow">
