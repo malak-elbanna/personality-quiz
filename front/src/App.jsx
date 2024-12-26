@@ -8,6 +8,7 @@ import Quiz2 from './pages/Quiz2';
 import Quiz3 from './pages/Quiz3';
 import Gallery from './pages/Gallery';
 import Success from './pages/Success';
+import SignUp from './pages/SignUp';
 
 const App = () => {
   return (
@@ -24,10 +25,13 @@ const App = () => {
         <Route path="/quiz/1" element={<Quiz1 />} />
         <Route path="/quiz/2" element={<Quiz2 />} />
         <Route path="/quiz/3" element={<Quiz3 />} />
-        <Route path="/success" element={<Success />}/>
+        <Route path="/success" element={<Success />} />
+
+        {/* Sign Up */}
+        <Route path="/signup" element={<SignUp />} />
       </Routes>
     </Router>
   );
-}
+};
 
 export default App;
