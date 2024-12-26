@@ -21,6 +21,12 @@ const Home = () => {
           <p className="text-xl text-purple-600 mb-8">
             Explore our wide range of fun, insightful personality quizzes. Uncover hidden truths about yourself, and share the experience with friends!
           </p>
+          <a 
+            href="/signup" 
+            className="bg-purple-700 text-white py-3 px-6 rounded-full text-lg font-semibold hover:bg-purple-800 transition duration-300 animate-bounce"
+          >
+            Sign Up Now!
+          </a>
         </div>
       </section>
 
