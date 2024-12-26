@@ -1,9 +1,7 @@
-import React from 'react';
 import Navbar from '../components/Navbar'; 
 import HeroCarousel from '../components/HeroCarousel';
 import Statistics from '../components/Statistics';
 import Footer from '../components/Footer';
-import { FaUsers, FaClipboardList, FaCheckCircle, FaStar } from 'react-icons/fa';
 
 const Home = () => {
   return (

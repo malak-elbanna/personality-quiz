@@ -23,7 +23,6 @@ const QuizCollection = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col items-center w-full">
-      
       <div className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-12 px-6 text-center w-full">
         <h1 className="text-4xl font-bold mb-4">Quiz Marketplace</h1>
         <p className="text-lg font-light">
@@ -40,7 +39,6 @@ const QuizCollection = () => {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
-          
           <button className="p-2 bg-indigo-500 text-white rounded-lg shadow hover:bg-indigo-600">
             <Search size={20} />
           </button>
@@ -65,7 +63,6 @@ const QuizCollection = () => {
           </div>
         )}
       </main>
-      
     </div>
   );
 };
