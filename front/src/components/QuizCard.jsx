@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const QuizCard = ({ quiz }) => {
@@ -18,7 +19,9 @@ const QuizCard = ({ quiz }) => {
           <span className="font-semibold text-purple-800">Recommended Age:</span> {ageRange}
         </p>
       </div>
-
+      <button className='p-2 bg-indigo-500 text-white rounded-lg shadow hover:bg-indigo-600 mt-5'>
+        <Link to={`/quiz/${quiz.id}`}>Take Quiz</Link>
+      </button>
     </div>
   );
 };
@@ -29,7 +32,8 @@ QuizCard.propTypes = {
     description: PropTypes.string.isRequired,
     estimatedTime: PropTypes.string.isRequired,
     ageRange: PropTypes.string.isRequired,
-    image: PropTypes.string, 
+    image: PropTypes.string,
+    id: PropTypes.string.isRequired,
   }).isRequired,
 };
 
