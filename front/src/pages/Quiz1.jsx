@@ -1,10 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import QuizJSON1 from "../data/quiz1.json";
+import QuestionCard from "../components/QuestionCard";
 
 const Quiz1 = () => {
+  const [quiz, setQuiz] = useState([]);
+
+  useEffect(() => {
+    setQuiz(QuizJSON1);
+  }, []);
+
   return (
     <div>
-      <h1>Quiz 1</h1>
+      {quiz.map((question) => (
+        <QuestionCard key={question.number} quest={question} />
+      ))}
     </div>
   )
 }
