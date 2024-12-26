@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from 'react';
 import QuoteCard from '../components/QuoteCard';
 
@@ -83,7 +84,7 @@ const Gallery = () => {
             onClick={nextSlide}
             className="absolute right-[-40px] top-1/2 transform -translate-y-1/2 bg-indigo-500 text-white px-4 py-2 rounded-full shadow hover:bg-indigo-600 transition"
           >
-            ❯
+            
           </button>
         </div>
         <div className="mt-4">
@@ -103,3 +104,4 @@ const Gallery = () => {
 };
 
 export default Gallery;
+>>>>>>> 60e9a03552971eefc7852c677083cad65cd13b20

@@ -23,7 +23,7 @@ const QuizCollection = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col items-center w-full">
-      <div className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-12 px-6 text-center w-full">
+      <div className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-12 px-6 text-center w-full mt-20">
         <h1 className="text-4xl font-bold mb-4">Quiz Marketplace</h1>
         <p className="text-lg font-light">
           Discover and challenge yourself with our collection of engaging quizzes
