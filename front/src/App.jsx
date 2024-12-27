@@ -12,7 +12,7 @@ import SignUp from './pages/SignUp';
 import Footer from './components/Footer';
 import AboutUs from './pages/AboutUs';
 import FAQs from './pages/FAQs';
-
+import Blog from './pages/Blog';
 
 const App = () => {
   return (
@@ -40,6 +40,9 @@ const App = () => {
 
         {/* FAQs */}
         <Route path="/FAQs" element={<FAQs />} />
+
+        {/* Blog */}
+        <Route path="/blog" element={<Blog />} />
 
       </Routes>
       <Footer />
