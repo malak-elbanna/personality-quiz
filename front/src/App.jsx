@@ -11,6 +11,7 @@ import Navbar from './components/Navbar';
 import SignUp from './pages/SignUp';
 import Footer from './components/Footer';
 import AboutUs from './pages/AboutUs';
+import FAQs from './pages/FAQs';
 
 
 const App = () => {
@@ -36,6 +37,10 @@ const App = () => {
 
         {/* Sign Up */}
         <Route path="/signup" element={<SignUp />} />
+
+        {/* FAQs */}
+        <Route path="/FAQs" element={<FAQs />} />
+
       </Routes>
       <Footer />
     </Router>
