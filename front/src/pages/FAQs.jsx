@@ -11,24 +11,42 @@ const FAQs = () => {
   const faqData = [
     {
       question: 'What quizzes are available on the website?',
-      answer: `We currently offer three personality quizzes:
-        - Personality Quiz 1: Ideal for ages 12-18 (10 minutes)
-        - Personality Quiz 2: Ideal for ages 18-25 (15 minutes)
-        - Personality Quiz 3: Ideal for ages 25-35 (20 minutes)`
+      answer: (
+        <div className="text-left">
+          We currently offer three personality quizzes:
+          <ul className="list-disc pl-6 mt-2">
+            <li> Personality Quiz 1: Ideal for ages 12-18 (10 minutes)</li>
+            <li> Personality Quiz 2: Ideal for ages 18-25 (15 minutes)</li>
+            <li> Personality Quiz 3: Ideal for ages 25-35 (20 minutes)</li>
+          </ul>
+        </div>
+      )
     },
     {
       question: 'How long do the quizzes take?',
-      answer: `The quizzes take varying amounts of time based on the quiz:
-        - Personality Quiz 1: Approximately 10 minutes
-        - Personality Quiz 2: Approximately 15 minutes
-        - Personality Quiz 3: Approximately 20 minutes`
+      answer: (
+        <div className="text-left">
+          The quizzes take varying amounts of time based on the quiz:
+          <ul className="list-disc pl-6 mt-2">
+            <li> Personality Quiz 1: Approximately 10 minutes</li>
+            <li> Personality Quiz 2: Approximately 15 minutes</li>
+            <li> Personality Quiz 3: Approximately 20 minutes</li>
+          </ul>
+        </div>
+      )
     },
     {
       question: 'Are there any age recommendations for the quizzes?',
-      answer: `Yes, each quiz is recommended for different age groups:
-        - Personality Quiz 1: Ages 12-18
-        - Personality Quiz 2: Ages 18-25
-        - Personality Quiz 3: Ages 25-35`
+      answer: (
+        <div className="text-left">
+          Yes, each quiz is recommended for different age groups:
+          <ul className="list-disc pl-6 mt-2">
+            <li> Personality Quiz 1: Ages 12-18</li>
+            <li> Personality Quiz 2: Ages 18-25</li>
+            <li> Personality Quiz 3: Ages 25-35</li>
+          </ul>
+        </div>
+      )
     },
     {
       question: 'Can I take more than one quiz?',
@@ -48,7 +66,7 @@ const FAQs = () => {
     <div className="min-h-screen bg-gray-50 text-gray-900">
       <Navbar />
       <section className="py-16 bg-white">
-        <div className="container mx-auto text-center px-6">
+        <div className="container mx-auto text-center px-6 mt-8">
           <h1 className="text-3xl font-semibold text-purple-700 mb-8">Frequently Asked Questions</h1>
           {faqData.map((faq, index) => (
             <div key={index} className="mb-6 bg-white shadow-md rounded-lg">
