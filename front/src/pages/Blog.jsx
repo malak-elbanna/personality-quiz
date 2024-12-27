@@ -1,44 +1,15 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 const Blog = () => {
   const [modalContent, setModalContent] = useState(null);
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  };
 
   const blogPosts = [
     {
       id: 'post1',
       title: "Understanding Your Personality",
-      avatar: "https://mypersonality.net/images/characters/esfj/female.svg",
+      avatar: "https://randomuser.me/api/portraits/women/1.jpg",
       description: "Learn about the different aspects of your personality and how they shape your behavior.",
       content: `
         <h2>Understanding Your Personality</h2>
@@ -57,7 +28,7 @@ const Blog = () => {
     {
       id: 'post2',
       title: "The Benefits of Personality Quizzes",
-      avatar: "https://mypersonality.net/images/characters/intj/male.svg",
+      avatar: "https://randomuser.me/api/portraits/men/2.jpg",
       description: "Discover the various benefits of taking personality quizzes and how they can help you.",
       content: `
         <h2>The Benefits of Personality Quizzes</h2>
@@ -75,7 +46,7 @@ const Blog = () => {
     {
       id: 'post3',
       title: "How to Use Personality Insights",
-      avatar: "https://mypersonality.net/images/characters/istp/male.svg",
+      avatar: "https://randomuser.me/api/portraits/men/3.jpg",
       description: "Find out how to use the insights from personality quizzes to improve your life.",
       content: `
         <h2>How to Use Personality Insights</h2>
@@ -91,7 +62,7 @@ const Blog = () => {
     {
       id: 'post4',
       title: "Exploring Different Personality Types",
-      avatar: "https://mypersonality.net/images/characters/intp/female.svg",
+      avatar: "https://randomuser.me/api/portraits/women/4.jpg",
       description: "Explore the different personality types and what they mean for you.",
       content: `
         <h2>Exploring Different Personality Types</h2>
@@ -115,28 +86,40 @@ const Blog = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-purple-100 text-gray-800 font-sans">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 mt-20">
       <Navbar />
-      <main className="flex-grow container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-semibold text-purple-700 mb-8 text-center">Our Blog</h1>
-        <Slider {...settings}>
-          {blogPosts.map((post, index) => (
-            <div key={index} className="p-4">
-              <div className="text-center">
-                <img src={post.avatar} alt={post.title} className="w-32 h-32 mx-auto rounded-full mb-4" />
-                <h2 className="text-xl font-semibold text-purple-700">{post.title}</h2>
-                <p className="text-gray-600">{post.description}</p>
-                <button
-                  className="mt-4 bg-purple-700 text-white py-2 px-4 rounded-full hover:bg-purple-800 transition duration-300"
-                  onClick={() => openModal(post.content)}
-                >
-                  Read More
-                </button>
+      <section className="relative overflow-hidden pt-16 pb-24 px-4">
+        <div className="max-w-6xl mx-auto text-center">
+          <h1 className="text-5xl font-bold mb-6 text-purple-700">
+            Our Blog
+          </h1>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Welcome to our blog! Here, we share insights and stories about personality traits, quizzes, and personal growth.
+          </p>
+        </div>
+      </section>
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12 text-purple-800">Blog Posts</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {blogPosts.map((post, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <div className="p-6 text-center">
+                  <img src={post.avatar} alt={post.title} className="w-32 h-32 mx-auto rounded-full mb-4" />
+                  <h3 className="text-xl font-semibold mb-2">{post.title}</h3>
+                  <p className="text-gray-600 mb-4">{post.description}</p>
+                  <button
+                    className="mt-4 bg-purple-700 text-white py-2 px-4 rounded-full hover:bg-purple-800 transition duration-300"
+                    onClick={() => openModal(post.content)}
+                  >
+                    Read More
+                  </button>
+                </div>
               </div>
-            </div>
-          ))}
-        </Slider>
-      </main>
+            ))}
+          </div>
+        </div>
+      </section>
       {modalContent && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white rounded-lg p-8 max-w-lg mx-auto relative">
