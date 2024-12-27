@@ -1,8 +1,8 @@
 import Navbar from '../components/Navbar'; 
 import HeroCarousel from '../components/HeroCarousel';
 import Statistics from '../components/Statistics';
-import Footer from '../components/Footer';
-
+import { Link } from "react-router-dom";
+import SignUp from './SignUp';
 const Home = () => {
   return (
     <div className="flex flex-col min-h-screen bg-purple-100 text-gray-800 font-sans">
@@ -21,12 +21,7 @@ const Home = () => {
           <p className="text-xl text-purple-600 mb-8">
             Explore our wide range of fun, insightful personality quizzes. Uncover hidden truths about yourself, and share the experience with friends!
           </p>
-          <a 
-            href="/signup" 
-            className="bg-purple-700 text-white py-3 px-6 rounded-full text-lg font-semibold hover:bg-purple-800 transition duration-300 animate-bounce"
-          >
-            Sign Up Now!
-          </a>
+         
         </div>
       </section>
 
@@ -37,12 +32,12 @@ const Home = () => {
           <p className="text-xl mb-8">
             Take our fun quizzes now and unlock your personality profile. What are you waiting for? Dive in!
           </p>
-          <a 
-            href="/QuizCollection" 
-            className="bg-purple-700 text-white py-3 px-6 rounded-full text-lg font-semibold hover:bg-purple-800 transition duration-300"
-          >
-            Start Quizzes Now
-          </a>
+                      <Link 
+              to="/collection" 
+              className="bg-purple-700 text-white py-3 px-6 rounded-full text-lg font-semibold hover:bg-purple-800 transition duration-300"
+            >
+              Start Quizzes Now
+            </Link>
         </div>
       </section>
 
@@ -54,8 +49,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <Footer />
+      
     </div>
   );
 };

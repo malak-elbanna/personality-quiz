@@ -1,18 +1,17 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './styles/tailwind.css';
 import QuizCollection from './pages/QuizCollection';
-import Gallery from './pages/Gallery';
 import Home from './pages/Home';
 import Quiz1 from './pages/Quiz1';
 import Quiz2 from './pages/Quiz2';
 import Quiz3 from './pages/Quiz3';
-
+import Gallery from './pages/Gallery';
 import Success from './pages/Success';
-
-import SignUp from './pages/SignUp';
-
 import Navbar from './components/Navbar';
+import SignUp from './pages/SignUp';
 import Footer from './components/Footer';
+import AboutUs from './pages/AboutUs';
+import FAQs from './pages/FAQs';
 
 
 const App = () => {
@@ -22,12 +21,13 @@ const App = () => {
       <Routes>
         {/* Home Page */}
         <Route path="/" element={<Home />} />
-        <Route path="/gallery" element={<Gallery />} />
+        
 
         <Route path="/gallery" element={<Gallery />}/>
 
         {/* Quiz Collection */}
         <Route path="/collection" element={<QuizCollection />} />
+        <Route path="/about" element={<AboutUs />} />
         
         {/* Quizzes */}
         <Route path="/quiz/1" element={<Quiz1 />} />
@@ -37,6 +37,10 @@ const App = () => {
 
         {/* Sign Up */}
         <Route path="/signup" element={<SignUp />} />
+
+        {/* FAQs */}
+        <Route path="/FAQs" element={<FAQs />} />
+
       </Routes>
       <Footer />
     </Router>

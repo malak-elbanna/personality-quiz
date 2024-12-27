@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 
 const QuestionCard = ({ quest, onAnswer }) => {
     const { number, question, a, b, c, d } = quest;
-
+    const savedAnswer = JSON.parse(localStorage.getItem("quiz1_answers")) || {};
+    console.log(savedAnswer);
     return (
         <div className="max-w-xl mx-auto my-4 p-6 bg-white rounded-xl shadow-lg border border-gray-200 transition-all duration-300 hover:scale-105 hover:shadow-2l">
             <h2 className="text-2xl font-bold text-center text-purple-900 mb-6">{number}. {question}</h2>

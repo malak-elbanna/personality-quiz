@@ -5,16 +5,26 @@ import { useNavigate } from "react-router-dom";
 
 const Quiz2 = () => {
   const [quiz, setQuiz] = useState([]);
-  const [answers, setAnswers] = useState({});
+  const [answers, setAnswers] = useState(()=> {
+    return JSON.parse(localStorage.getItem("quiz2_answers")) || {};
+  });
+  const [hasCompletedQuiz, setHasCompletedQuiz] = useState(
+    JSON.parse(localStorage.getItem("quiz2_completed")) || false
+  );
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
   useEffect(() => {
     setQuiz(Quiz2JSON);
-  }, []);
+    if (hasCompletedQuiz) {
+      navigate("/success", { state: { alreadyCompleted: true } });
+    }
+  }, [hasCompletedQuiz, navigate]);
 
   const handleAnswer = (questionNumber, answer) => {
-    setAnswers((prev) => ({ ...prev, [questionNumber]: answer }));
+    const updatedAnswers = { ...answers, [questionNumber]: answer };
+    setAnswers(updatedAnswers);
+    localStorage.setItem("quiz2_answers", JSON.stringify(updatedAnswers));
     setError("");
   };
 
@@ -22,12 +32,33 @@ const Quiz2 = () => {
     if (Object.keys(answers).length !== quiz.length) {
       setError("Please answer all questions before submitting.");
     } else {
+      localStorage.setItem("quiz2_completed", JSON.stringify(true));
       navigate("/success");
     }
   };
+
+  const handleRetake = () => {
+    localStorage.removeItem("quiz2_answers");
+    localStorage.removeItem("quiz2_completed");
+    setAnswers({});
+    setHasCompletedQuiz(false);
+    setQuiz(Quiz2JSON);
+  };
+
   const progress = (Object.keys(answers).length / quiz.length) * 100;
 
-  return (
+  return hasCompletedQuiz ? (
+    <div className="bg-gradient-to-r from-indigo-500 to-purple-500 min-h-screen flex flex-col items-center justify-center text-center text-white">
+      <h1 className="text-4xl font-bold mb-4">You already took this quiz!</h1>
+      <p className="text-lg mb-8">Feel free to retake it if you'd like.</p>
+      <button
+        onClick={handleRetake}
+        className="px-8 py-3 bg-purple-700 text-white font-semibold rounded-lg hover:bg-purple-800 transition duration-300 transform hover:scale-105"
+      >
+        Retake Quiz
+      </button>
+    </div>
+  ) : (
     <div className="bg-gradient-to-r from-blue-500 to-green-500 min-h-screen flex flex-col">
       <div className="sticky top-[64px] z-50 bg-white bg-opacity-90 shadow-md py-2">
         <div className="w-10/12 mx-auto bg-gray-200 rounded-full h-6">
