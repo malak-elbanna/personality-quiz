@@ -79,7 +79,7 @@ const PersonalityType = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-purple-100 text-gray-800 font-sans items-center">
+    <div className="flex flex-col min-h-screen bg-white text-gray-800 font-sans items-center">
       <Navbar />
       <main className="flex-grow container mx-auto px-4 py-16 text-center">
         <h1 className="text-4xl font-semibold text-purple-700 mb-8">Personality Types</h1>
@@ -100,7 +100,7 @@ const PersonalityType = () => {
           ))}
         </Slider>
       </main>
-      <Footer />
+    
     </div>
   );
 };
