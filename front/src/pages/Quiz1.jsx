@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import QuestionCard from "../components/QuestionCard";
 import Quiz1JSON from "../data/quiz1.json";
 import Navbar from "../components/Navbar";
@@ -62,7 +62,6 @@ const Quiz1 = () => {
     </div>
   ) : (
     <div className="bg-gradient-to-r from-indigo-500 to-purple-500 min-h-screen flex flex-col">
-      <Navbar />
       <div className="sticky top-[64px] z-50 bg-white bg-opacity-90 shadow-md py-2">
         <div className="w-10/12 mx-auto bg-gray-200 rounded-full h-6">
           <div
@@ -98,9 +97,6 @@ const Quiz1 = () => {
         </div>
       </div>
 
-      <div className="bg-gray-50">
-        <Footer />
-      </div>
     </div>
   );
 };

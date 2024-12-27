@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import QuestionCard from "../components/QuestionCard";
 import Quiz2JSON from "../data/quiz2.json";
-import Navbar from '../components/Navbar';
-import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
 
 const Quiz2 = () => {
@@ -62,7 +60,6 @@ const Quiz2 = () => {
     </div>
   ) : (
     <div className="bg-gradient-to-r from-blue-500 to-green-500 min-h-screen flex flex-col">
-      <Navbar />
       <div className="sticky top-[64px] z-50 bg-white bg-opacity-90 shadow-md py-2">
         <div className="w-10/12 mx-auto bg-gray-200 rounded-full h-6">
           <div
@@ -96,10 +93,6 @@ const Quiz2 = () => {
             Submit
           </button>
         </div>
-      </div>
-
-      <div className="bg-gray-50">
-        <Footer />
       </div>
     </div>
   );

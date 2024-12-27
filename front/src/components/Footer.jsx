@@ -4,7 +4,7 @@ import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa'; // Importin
 
 const Footer = () => {
   return (
-    <footer className="footer bg-purple-150">
+    <footer className="footer bg-purple-150 mb-10 mt-10">
       <div className="footer-content container mx-auto px-4 text-center">
         <p className="text-purple-600">&copy; {new Date().getFullYear()} Quiz Haven. All rights reserved.</p>
         <div className="social-links flex justify-center space-x-6 mt-4">
