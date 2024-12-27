@@ -18,7 +18,7 @@ const Navbar = () => {
         </Link>
         
         <div className="flex-1 flex justify-center">
-          <div className={`flex space-x-6 ${menuActive ? 'block' : 'hidden'} md:flex`}>
+          <div className={`flex-col md:flex-row md:flex space-y-4 md:space-y-0 md:space-x-6 ${menuActive ? 'flex' : 'hidden'} md:flex`}>
             <Link to="/" className="text-purple-600 hover:text-purple-800 hover:underline hover:underline-offset-8">Home</Link>
             <Link to="/collection" className="text-purple-600 hover:text-purple-800 hover:underline hover:underline-offset-8">Quizzes</Link>
             <Link to="/about" className="text-purple-600 hover:text-purple-800 hover:underline hover:underline-offset-8">About Us</Link>
@@ -27,9 +27,9 @@ const Navbar = () => {
           </div>
         </div>
         
-        <button onClick={()=>navigate('/signup')} className="bg-transparent hover:bg-purple-800 text-purple-800 font-semibold hover:text-white py-1 px-2 border border-purple-800 hover:border-transparent rounded">Sign Up</button>
+        <button onClick={()=>navigate('/signup')} className="bg-transparent hover:bg-purple-800 text-purple-800 font-semibold hover:text-white py-1 px-2 border border-purple-800 hover:border-transparent rounded ml-4">Sign Up</button>
         
-        <button className="md:hidden text-purple-600" onClick={toggleMenu}>
+        <button className="md:hidden text-purple-600 ml-4" onClick={toggleMenu}>
           ☰
         </button>
       </div>
