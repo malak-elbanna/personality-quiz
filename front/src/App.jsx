@@ -14,6 +14,7 @@ import AboutUs from './pages/AboutUs';
 import FAQs from './pages/FAQs';
 import Blog from './pages/Blog';
 import PersonalityType from './pages/PersonalityType';
+import QuizHistory from './pages/QuizHistory';
 
 const App = () => {
   return (
@@ -34,6 +35,7 @@ const App = () => {
         <Route path="/quiz/1" element={<Quiz1 />} />
         <Route path="/quiz/2" element={<Quiz2 />} />
         <Route path="/quiz/3" element={<Quiz3 />} />
+        <Route path="/quiz/:id" element={<Quiz1 />} />
         <Route path="/success" element={<Success />} />
 
         {/* Sign Up */}
@@ -47,6 +49,8 @@ const App = () => {
 
         {/* Personality Type */}
         <Route path="/personality-type" element={<PersonalityType />} />
+
+        <Route path="/quiz-history" element={<QuizHistory />} />
 
       </Routes>
       <Footer />
