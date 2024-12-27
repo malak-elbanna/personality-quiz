@@ -13,6 +13,7 @@ import Footer from './components/Footer';
 import AboutUs from './pages/AboutUs';
 import FAQs from './pages/FAQs';
 import Blog from './pages/Blog';
+import PersonalityType from './pages/PersonalityType';
 
 const App = () => {
   return (
@@ -43,6 +44,9 @@ const App = () => {
 
         {/* Blog */}
         <Route path="/blog" element={<Blog />} />
+
+        {/* Personality Type */}
+        <Route path="/personality-type" element={<PersonalityType />} />
 
       </Routes>
       <Footer />
