@@ -15,6 +15,8 @@ import PersonalityType from './pages/PersonalityType';
 import NotFound from './pages/NotFound';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import FunFacts from './pages/FunFacts';
+import PersonalityTypeCompatibility from './pages/PersonalityTypeCompatibility';
 
 const App = () => {
   return (
@@ -39,6 +41,13 @@ const App = () => {
 
         {/* Blog */}
         <Route path="/blog" element={<Blog />} />
+        
+        {/* Fun Facts */}
+        <Route path="/FunFacts" element={<FunFacts />} />
+
+
+        {/* Personality Type Compatibility */}
+        <Route path="/PersonalityTypeCompatibility" element={<PersonalityTypeCompatibility />} />
 
         {/* Personality Type */}
         <Route path="/personality-type" element={<PersonalityType />} />
