@@ -21,10 +21,10 @@ const Navbar = () => {
           <div className={`flex-col md:flex-row md:flex space-y-4 md:space-y-0 md:space-x-6 ${menuActive ? 'flex' : 'hidden'} md:flex`}>
             <Link to="/" className="text-purple-600 hover:text-purple-800 hover:underline hover:underline-offset-8">Home</Link>
             <Link to="/collection" className="text-purple-600 hover:text-purple-800 hover:underline hover:underline-offset-8">Quizzes</Link>
-            <Link to="/about" className="text-purple-600 hover:text-purple-800 hover:underline hover:underline-offset-8">About Us</Link>
+            <Link to="/aboutus" className="text-purple-600 hover:text-purple-800 hover:underline hover:underline-offset-8">About Us</Link>
             <Link to="/blog" className="text-purple-600 hover:text-purple-800 hover:underline hover:underline-offset-8">Blog</Link>
             <Link to="/gallery" className="text-purple-600 hover:text-purple-800 hover:underline hover:underline-offset-8">Gallery</Link>
-            <Link to="/FAQs" className="text-purple-600 hover:text-purple-800 hover:underline hover:underline-offset-8">FAQs</Link>
+            <Link to="/faq" className="text-purple-600 hover:text-purple-800 hover:underline hover:underline-offset-8">FAQs</Link>
           </div>
         </div>
         

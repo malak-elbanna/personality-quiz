@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './styles/tailwind.css';
+import AboutUs from './pages/AboutUs';
+import FAQ from './pages/FAQs';
 import QuizCollection from './pages/QuizCollection';
 import Gallery from './pages/Gallery';
 import Home from './pages/Home';
@@ -40,7 +42,8 @@ const App = () => {
 
         {/* Personality Type */}
         <Route path="/personality-type" element={<PersonalityType />} />
-
+        <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/faq" element={<FAQ />} />
         {/* 404 Page */}
         <Route path="*" element={<NotFound />} /> 
       </Routes>
