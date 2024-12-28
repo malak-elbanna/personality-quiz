@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './styles/tailwind.css';
 import AboutUs from './pages/AboutUs';
-import FAQ from './pages/FAQs';
 import QuizCollection from './pages/QuizCollection';
 import Gallery from './pages/Gallery';
 import Home from './pages/Home';
@@ -18,6 +17,7 @@ import Footer from './components/Footer';
 import FunFacts from './pages/FunFacts';
 import PersonalityTypeCompatibility from './pages/PersonalityTypeCompatibility';
 import FAQs from './pages/FAQs';
+import QuizHistory from './pages/QuizHistory';
 
 const App = () => {
   return (
@@ -46,6 +46,8 @@ const App = () => {
         {/* Fun Facts */}
         <Route path="/FunFacts" element={<FunFacts />} />
 
+        {/* Quiz History */}
+        <Route path="/quiz-history" element={<QuizHistory />} />
 
         {/* Personality Type Compatibility */}
         <Route path="/PersonalityTypeCompatibility" element={<PersonalityTypeCompatibility />} />
