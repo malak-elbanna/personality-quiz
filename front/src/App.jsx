@@ -46,7 +46,7 @@ const App = () => {
         <Route path="/signin" element={<Signin />} />
 
         {/* FAQs */}
-        <Route path="/faqs" element={<FAQs />} />
+        <Route path="/FAQs" element={<FAQs />} />
 
         {/* Personality Type */}
         <Route path="/personalitytype" element={<PersonalityType />} />
@@ -66,6 +66,7 @@ const App = () => {
         <Route path="/Quizhistory" element={<QuizHistory/>} />
 
         <Route path="/results" element={<Results/>} />
+        
 
 
         {/* Catch-all Route for 404 */}

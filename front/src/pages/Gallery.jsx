@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import QuoteCard from '../components/QuoteCard';
 
@@ -62,13 +61,13 @@ const Gallery = () => {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col items-center w-full">
       <div className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-12 px-6 text-center w-full mt-20">
-        <h1 className="text-4xl font-bold mb-4">Gallery</h1>
-        <p className="text-lg font-light">Explore our collection of inspiring quotes</p>
+        <h1 className="text-4xl sm:text-5xl font-bold mb-4">Gallery</h1>
+        <p className="text-lg sm:text-xl font-light">Explore our collection of inspiring quotes</p>
       </div>
 
       <main className="container mx-auto px-4 py-8 flex-1 w-full flex flex-col items-center">
         <div className="relative w-full max-w-4xl">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 transition-all duration-300">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 transition-all duration-300">
             {getCurrentSlideQuotes().map((quote, index) => (
               <QuoteCard key={index} quote={quote.quote} author={quote.author} />
             ))}
@@ -76,18 +75,19 @@ const Gallery = () => {
 
           <button
             onClick={prevSlide}
-            className="absolute left-[-40px] top-1/2 transform -translate-y-1/2 bg-indigo-500 text-white px-4 py-2 rounded-full shadow hover:bg-indigo-600 transition"
+            className="absolute left-[-20px] sm:left-[-40px] top-1/2 transform -translate-y-1/2 bg-indigo-500 text-white px-4 py-2 rounded-full shadow hover:bg-indigo-600 transition"
           >
             ❮
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-[-40px] top-1/2 transform -translate-y-1/2 bg-indigo-500 text-white px-4 py-2 rounded-full shadow hover:bg-indigo-600 transition"
+            className="absolute right-[-20px] sm:right-[-40px] top-1/2 transform -translate-y-1/2 bg-indigo-500 text-white px-4 py-2 rounded-full shadow hover:bg-indigo-600 transition"
           >
-            
+            ❯
           </button>
         </div>
-        <div className="mt-4">
+
+        <div className="mt-4 flex justify-center">
           {Array.from({ length: totalSlides }).map((_, index) => (
             <button
               key={index}
