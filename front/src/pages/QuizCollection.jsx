@@ -3,6 +3,7 @@ import { Search } from 'lucide-react';
 import QuizCard from '../components/QuizCard';
 import QuizJSON from '../data/quizzes.json';
 import { useNavigate } from "react-router-dom";
+import QuizHistory from './QuizHistory';
 
 const QuizCollection = () => {
   const [quizzes, setQuizzes] = useState([]);
@@ -33,7 +34,7 @@ const QuizCollection = () => {
 
         <button
           className="mt-10 mb-6 px-20 py-3 bg-white text-indigo-500 font-semibold rounded-xl hover:bg-slate-100 hover:text-purple-500 transition duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50"
-          onClick={() => navigate("/quiz-history")}
+          onClick={() => navigate("/Quizhistory")}
         >
           View Quiz History
         </button>

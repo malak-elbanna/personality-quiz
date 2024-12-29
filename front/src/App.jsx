@@ -19,6 +19,7 @@ import PersonalityTypeCompatibility from './pages/PersonalityTypeCompatibility';
 import FAQs from './pages/FAQs';
 import Signin from './pages/Signin';
 import QuizHistory from './pages/QuizHistory';
+import Results from './pages/Results';
 
 const App = () => {
   return (
@@ -63,6 +64,8 @@ const App = () => {
         <Route path="/funfacts" element={<FunFacts />} />
         {/* Quiz History*/}
         <Route path="/Quizhistory" element={<QuizHistory/>} />
+
+        <Route path="/results" element={<Results/>} />
 
 
         {/* Catch-all Route for 404 */}

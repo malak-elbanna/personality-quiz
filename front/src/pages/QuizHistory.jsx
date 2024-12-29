@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import QuizCard from "../components/QuizCard";
 import quizzes from "../data/quizzes.json";
 import AnswerModal from "../components/AnswerModal";
+import { useNavigate } from "react-router-dom";
 
 const QuizHistory = () => {
   const [history, setHistory] = useState([]);
