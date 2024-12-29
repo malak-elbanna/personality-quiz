@@ -69,17 +69,18 @@ const Results = () => {
     });
 
     const totalScore = Object.values(totalScores).reduce((acc, score) => acc + score, 0);
-
     const percentages = Object.keys(totalScores).reduce((acc, trait) => {
-      acc[trait] = Math.round((totalScores[trait] / totalScore) * 100);
+      acc[trait] = ((totalScores[trait] / totalScore) * 100).toFixed(3);  // Rounded to 3 decimals
       return acc;
     }, {});
-
-    const sum = Object.values(percentages).reduce((acc, value) => acc + value, 0);
+    
+    const sum = Object.values(percentages).reduce((acc, value) => acc + parseFloat(value), 0); // Parsing the percentage values to sum them
+    
     const adjustedPercentages = Object.keys(percentages).reduce((acc, trait) => {
-      acc[trait] = Math.round((percentages[trait] / sum) * 100);
+      acc[trait] = ((parseFloat(percentages[trait]) / sum) * 100).toFixed(3);  // Rounded to 3 decimals
       return acc;
     }, {});
+    
 
     setPercentage(adjustedPercentages);
 
