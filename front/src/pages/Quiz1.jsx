@@ -1,13 +1,11 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import QuestionCard from "../components/QuestionCard";
 import Quiz1JSON from "../data/quiz1.json";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
 
 const Quiz1 = () => {
   const [quiz, setQuiz] = useState([]);
-  const [answers, setAnswers] = useState(() => {
+  const [answers, setAnswers] = useState(()=> {
     return JSON.parse(localStorage.getItem("quiz1_answers")) || {};
   });
   const [hasCompletedQuiz, setHasCompletedQuiz] = useState(
@@ -17,11 +15,15 @@ const Quiz1 = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    // Load quiz questions
     setQuiz(Quiz1JSON);
+  
+    // Check if the quiz has been completed
     if (hasCompletedQuiz) {
-      navigate("/success", { state: { alreadyCompleted: true } });
+      navigate("/quiz/1"); // Replace with the specific quiz page URL
     }
   }, [hasCompletedQuiz, navigate]);
+  
 
   const handleAnswer = (questionNumber, answer) => {
     const updatedAnswers = { ...answers, [questionNumber]: answer };
@@ -45,6 +47,7 @@ const Quiz1 = () => {
     setAnswers({});
     setHasCompletedQuiz(false);
     setQuiz(Quiz1JSON);
+    navigate("/quiz/1"); 
   };
 
   const progress = (Object.keys(answers).length / quiz.length) * 100;
@@ -61,7 +64,7 @@ const Quiz1 = () => {
       </button>
     </div>
   ) : (
-    <div className="bg-gradient-to-r from-indigo-500 to-purple-500 min-h-screen flex flex-col">
+    <div className="bg-gradient-to-r from-blue-500 to-green-500 min-h-screen flex flex-col">
       <div className="sticky top-[64px] z-50 bg-white bg-opacity-90 shadow-md py-2">
         <div className="w-10/12 mx-auto bg-gray-200 rounded-full h-6">
           <div
@@ -96,7 +99,6 @@ const Quiz1 = () => {
           </button>
         </div>
       </div>
-
     </div>
   );
 };

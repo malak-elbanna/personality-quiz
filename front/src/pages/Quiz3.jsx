@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 const Quiz3 = () => {
   const [quiz, setQuiz] = useState([]);
-  const [answers, setAnswers] = useState(() => {
+  const [answers, setAnswers] = useState(()=> {
     return JSON.parse(localStorage.getItem("quiz3_answers")) || {};
   });
   const [hasCompletedQuiz, setHasCompletedQuiz] = useState(
@@ -16,10 +16,13 @@ const Quiz3 = () => {
 
   useEffect(() => {
     setQuiz(Quiz3JSON);
+  
+    // Check if the quiz has been completed
     if (hasCompletedQuiz) {
-      navigate("/success", { state: { alreadyCompleted: true } });
+      navigate("/quiz/3"); // Replace with the specific quiz page URL
     }
   }, [hasCompletedQuiz, navigate]);
+  
 
   const handleAnswer = (questionNumber, answer) => {
     const updatedAnswers = { ...answers, [questionNumber]: answer };
@@ -42,7 +45,8 @@ const Quiz3 = () => {
     localStorage.removeItem("quiz3_completed");
     setAnswers({});
     setHasCompletedQuiz(false);
-    setQuiz(Quiz3JSON);
+    setQuiz(QuizJSON);
+    navigate("/quiz/3"); 
   };
 
   const progress = (Object.keys(answers).length / quiz.length) * 100;
@@ -59,7 +63,7 @@ const Quiz3 = () => {
       </button>
     </div>
   ) : (
-    <div className="bg-gradient-to-r from-red-500 to-yellow-500 min-h-screen flex flex-col">
+    <div className="bg-gradient-to-r from-blue-500 to-green-500 min-h-screen flex flex-col">
       <div className="sticky top-[64px] z-50 bg-white bg-opacity-90 shadow-md py-2">
         <div className="w-10/12 mx-auto bg-gray-200 rounded-full h-6">
           <div

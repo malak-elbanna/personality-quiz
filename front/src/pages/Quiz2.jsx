@@ -15,11 +15,15 @@ const Quiz2 = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    // Load quiz questions
     setQuiz(Quiz2JSON);
+  
+    // Check if the quiz has been completed
     if (hasCompletedQuiz) {
-      navigate("/success", { state: { alreadyCompleted: true } });
+      navigate("/quiz/2"); // Replace with the specific quiz page URL
     }
   }, [hasCompletedQuiz, navigate]);
+  
 
   const handleAnswer = (questionNumber, answer) => {
     const updatedAnswers = { ...answers, [questionNumber]: answer };
@@ -42,7 +46,8 @@ const Quiz2 = () => {
     localStorage.removeItem("quiz2_completed");
     setAnswers({});
     setHasCompletedQuiz(false);
-    setQuiz(Quiz2JSON);
+    setQuiz(QuizJSON);
+    navigate("/quiz/2"); 
   };
 
   const progress = (Object.keys(answers).length / quiz.length) * 100;
