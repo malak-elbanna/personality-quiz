@@ -12,7 +12,11 @@ import SignUp from './pages/SignUp';
 import Footer from './components/Footer';
 import AboutUs from './pages/AboutUs';
 import FAQs from './pages/FAQs';
-
+import Blog from './pages/Blog';
+import PersonalityType from './pages/PersonalityType';
+import QuizHistory from './pages/QuizHistory';
+import Results from './pages/Results';
+import Signin from './pages/Signin';
 
 const App = () => {
   return (
@@ -24,6 +28,7 @@ const App = () => {
         
 
         <Route path="/gallery" element={<Gallery />}/>
+        <Route path="/results" element={<Results />}/>
 
         {/* Quiz Collection */}
         <Route path="/collection" element={<QuizCollection />} />
@@ -37,9 +42,20 @@ const App = () => {
 
         {/* Sign Up */}
         <Route path="/signup" element={<SignUp />} />
+         {/* Sign Up */}
+        <Route path="/signin" element={<Signin />} />
 
         {/* FAQs */}
         <Route path="/FAQs" element={<FAQs />} />
+
+        {/* Blog */}
+        <Route path="/blog" element={<Blog />} />
+
+        {/* Personality Type */}
+        <Route path="/personality-type" element={<PersonalityType />} />
+
+        <Route path="/quiz-history" element={<QuizHistory />} />
+       
 
       </Routes>
       <Footer />
