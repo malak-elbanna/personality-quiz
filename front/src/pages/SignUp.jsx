@@ -35,6 +35,10 @@ const SignUp = () => {
 
   return (
     <div className="flex flex-col min-h-screen bg-purple-100 text-gray-800 font-sans">
+      {/* Navbar */}
+      <Navbar />
+
+      {/* Sign Up Section */}
       <section className="bg-white py-16 flex-grow">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-semibold text-purple-700 mb-4">Sign Up</h2>
