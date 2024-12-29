@@ -17,7 +17,6 @@ import Footer from './components/Footer';
 import FunFacts from './pages/FunFacts';
 import PersonalityTypeCompatibility from './pages/PersonalityTypeCompatibility';
 import FAQs from './pages/FAQs';
-import Signin from './pages/Signin';
 import QuizHistory from './pages/QuizHistory';
 import Results from './pages/Results';
 
@@ -43,7 +42,7 @@ const App = () => {
 
         {/* Sign Up */}
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/signin" element={<Signin />} />
+        
 
         {/* FAQs */}
         <Route path="/FAQs" element={<FAQs />} />
