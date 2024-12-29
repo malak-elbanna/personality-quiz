@@ -17,7 +17,8 @@ import Footer from './components/Footer';
 import FunFacts from './pages/FunFacts';
 import PersonalityTypeCompatibility from './pages/PersonalityTypeCompatibility';
 import FAQs from './pages/FAQs';
-
+import Signin from './pages/Signin';
+import QuizHistory from './pages/QuizHistory';
 
 const App = () => {
   return (
@@ -26,9 +27,9 @@ const App = () => {
       <Routes>
         {/* Home Page */}
         <Route path="/" element={<Home />} />
-        
 
-        <Route path="/gallery" element={<Gallery />}/>
+        {/* Gallery */}
+        <Route path="/gallery" element={<Gallery />} />
 
         {/* Quiz Collection */}
         <Route path="/collection" element={<QuizCollection />} />
@@ -41,13 +42,31 @@ const App = () => {
 
         {/* Sign Up */}
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/signin" element={<Signin />} />
 
         {/* FAQs */}
         <Route path="/faqs" element={<FAQs />} />
 
-        {/*personality type */}
+        {/* Personality Type */}
         <Route path="/personalitytype" element={<PersonalityType />} />
 
+        {/* About Us */}
+        <Route path="/aboutus" element={<AboutUs />} />
+
+        {/* Blog */}
+        <Route path="/blog" element={<Blog />} />
+
+        {/* Personality Type Compatibility */}
+        <Route path="/personalitytypecompatibility" element={<PersonalityTypeCompatibility />} />
+
+        {/* Fun Facts */}
+        <Route path="/funfacts" element={<FunFacts />} />
+        {/* Quiz History*/}
+        <Route path="/Quizhistory" element={<QuizHistory/>} />
+
+
+        {/* Catch-all Route for 404 */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </Router>

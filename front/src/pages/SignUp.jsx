@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
-=======
 import React, { useState } from 'react';
->>>>>>> 0b8612f1ea667c391d256a09594625f5f8ff819d
 
 const SignUp = () => {
   const [name, setName] = useState('');
@@ -111,7 +108,6 @@ const SignUp = () => {
               Sign Up
             </button>
           </form>
-<<<<<<< HEAD
 
           {/* Sign In Link */}
           <div className="mt-6">
@@ -122,14 +118,11 @@ const SignUp = () => {
               </Link>
             </p>
           </div>
-        </div>
-      </section>
 
-=======
+          {/* Message */}
           {message && <p className="mt-4 text-purple-700">{message}</p>}
         </div>
       </section>
->>>>>>> 0b8612f1ea667c391d256a09594625f5f8ff819d
     </div>
   );
 };
