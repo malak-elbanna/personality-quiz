@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Slider from 'react-slick';
@@ -70,6 +70,9 @@ const PersonalityType = () => {
     }
   ];
 
+  // Create a reference for the slider
+  const sliderRef = useRef(null);
+
   const settings = {
     dots: true,
     infinite: true,
@@ -81,26 +84,46 @@ const PersonalityType = () => {
   return (
     <div className="flex flex-col min-h-screen bg-white text-gray-800 font-sans items-center">
       <Navbar />
-      <main className="flex-grow container mx-auto px-4 py-16 text-center">
+      <main className="flex-grow container mx-auto px-4 py-16 text-center mt-10">
         <h1 className="text-4xl font-semibold text-purple-700 mb-8">Personality Types</h1>
-        <Slider {...settings}>
-          {personalityTraits.map((trait) => (
-            <div key={trait.id} className="mb-8">
-              <h2 className="text-3xl font-semibold text-purple-700 mb-4">{trait.trait}</h2>
-              <img src={trait.image} alt={trait.trait} className="w-32 h-32 mx-auto rounded mb-4" />
-              <p className="text-gray-600 mb-4">{trait.description}</p>
-              <ul className="list-disc list-inside">
-                {trait.subTraits.map((subTrait, index) => (
-                  <li key={index}>
-                    <strong>{subTrait.name}</strong>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </Slider>
+        <div className="relative">
+          {/* Custom previous arrow */}
+          <button
+            onClick={() => sliderRef.current.slickPrev()}
+            className="absolute top-1/3 left-4 transform -translate-y-1/2 text-purple-600 text-3xl sm:text-4xl md:text-5xl lg:text-6xl z-10"
+          >
+            ←
+          </button>
+
+          <Slider ref={sliderRef} {...settings}>
+            {personalityTraits.map((trait) => (
+              <div key={trait.id} className="mb-8">
+                <h2 className="text-3xl font-semibold text-purple-700 mb-4">{trait.trait}</h2>
+                <img
+                  src={trait.image}
+                  alt={trait.trait}
+                  className="w-32 h-32 mx-auto rounded-full mb-4"
+                />
+                <p className="text-gray-800 mb-4">{trait.description}</p>
+                <ul className="list-disc list-inside text-left ml-12">
+                  {trait.subTraits.map((subTrait, index) => (
+                    <li key={index} className="text-purple-600 font-medium">{subTrait.name}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </Slider>
+
+          {/* Custom next arrow */}
+          <button
+            onClick={() => sliderRef.current.slickNext()}
+            className="absolute top-1/3 right-4 transform -translate-y-1/2 text-purple-600 text-3xl sm:text-4xl md:text-5xl lg:text-6xl z-10"
+          >
+            →
+          </button>
+        </div>
       </main>
-    
+      <Footer />
     </div>
   );
 };
