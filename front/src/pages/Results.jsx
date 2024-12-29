@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Doughnut } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend, Title } from "chart.js";
 import { useLocation, useNavigate } from "react-router-dom";
-import ChartDataLabels from "chartjs-plugin-datalabels"; // Import the plugin
+import ChartDataLabels from "chartjs-plugin-datalabels"; 
 
-// Register chart components
+
 ChartJS.register(ArcElement, Tooltip, Legend, Title, ChartDataLabels);
 
 const answerPoints = {
@@ -105,7 +105,9 @@ const Results = () => {
           percentage.extraversion || 0,
           percentage.conscientiousness || 0,
         ],
-        backgroundColor: ["#FF5733", "#33FF57", "#3357FF", "#FF33A1", "#F1C40F"],
+        backgroundColor: [
+           "#BB6FF0", "#FFB6C1", "#FFEB8D", "#A0D8FF", "#A8E6A1"
+        ], // Shades of purple, pink, yellow, blue
         borderWidth: 0,
       },
     ],
@@ -125,23 +127,37 @@ const Results = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white py-12 px-12">
+    <div className="min-h-screen bg-white py-16 px-12 mt-20">
       <h1 className="text-5xl font-extrabold text-purple-700 mb-6 text-left">Your Quiz Results</h1>
-      <div className="w-96 h-96 mb-10 mx-auto rounded-lg">
+      <div className="w-96 h-96 mb-12 mx-auto rounded-lg">
         <Doughnut data={data} />
       </div>
-      <h1 className="text-xl font-bold text-purple-600 mb-10 text-left">
-        Your biggest trait is: {biggestTrait.charAt(0).toUpperCase() + biggestTrait.slice(1)}
+      <h1 className="text-5xl font-extrabold bg-gradient-to-r from-pink-500 via-indigo-600 to-yellow-500 text-transparent bg-clip-text mb-8 text-center w-full">
+      Your main trait is: {biggestTrait.charAt(0).toUpperCase() + biggestTrait.slice(1)}
       </h1>
-      <div className="py-8 px-12 m-0">
-        <p className="text-xl mb-8 text-purple-700 font-semibold text-left leading-8">
-          <span className="block text-2xl font-bold mb-4">You answered:</span>
-          Openness: <span className="font-bold text-purple-900">{percentage.openness}%</span> <br />
-          Neuroticism: <span className="font-bold text-purple-900">{percentage.neuroticism}%</span> <br />
-          Agreeableness: <span className="font-bold text-purple-900">{percentage.agreeableness}%</span> <br />
-          Extraversion: <span className="font-bold text-purple-900">{percentage.extraversion}%</span> <br />
-          Conscientiousness: <span className="font-bold text-purple-900">{percentage.conscientiousness}%</span>.
-        </p>
+
+      <div className="py-8 px-12 mb-12 bg-white rounded-lg shadow-lg">
+        <div className="mb-8">
+          <p className="text-xl text-purple-900 font-semibold">
+            Openness: <span className="font-bold text-purple-700">{percentage.openness}%</span> <br />
+            Neuroticism: <span className="font-bold text-purple-700">{percentage.neuroticism}%</span> <br />
+            Agreeableness: <span className="font-bold text-purple-700">{percentage.agreeableness}%</span> <br />
+            Extraversion: <span className="font-bold text-purple-700">{percentage.extraversion}%</span> <br />
+            Conscientiousness: <span className="font-bold text-purple-700">{percentage.conscientiousness}%</span>.
+          </p>
+        </div>
+        <div className="bg-gray-100 p-4 rounded-lg shadow-md">
+          <h2 className="text-lg font-bold text-purple-700 mb-4">Trait Descriptions:</h2>
+          <ul>
+         <li><strong style={{ color: "#8A2BE2" }}>Openness:</strong> Describes the extent to which you are imaginative and curious.</li>
+         <li><strong style={{ color: "#FF66B2" }}>Neuroticism:</strong> Indicates how prone you are to stress and emotional instability.</li>
+         <li><strong style={{ color: "#FFEB3B" }}>Agreeableness:</strong> Measures your ability to be compassionate and cooperative.</li>
+         <li><strong style={{ color: "#2196F3" }}>Extraversion:</strong> Reflects your level of social interaction and enthusiasm.</li>
+         <li><strong style={{ color: "#4CAF50" }}>Conscientiousness:</strong> Shows how reliable, organized, and goal-oriented you are.</li>
+         </ul>
+
+
+        </div>
       </div>
       <div className="flex justify-start mb-12">
         <button
