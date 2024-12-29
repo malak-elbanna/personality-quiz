@@ -1,12 +1,12 @@
 import React from 'react';
-import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa'; // Importing social icons
+import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa'; 
 
 
 const Footer = () => {
   return (
     <footer className="footer bg-purple-150 mb-10 mt-10">
       <div className="footer-content container mx-auto px-4 text-center">
-        <p className="text-purple-600">&copy; {new Date().getFullYear()} Quiz Haven. All rights reserved.</p>
+        <p className="text-purple-600">&copy; {new Date().getFullYear()} Quizzy. All rights reserved.</p>
         <div className="social-links flex justify-center space-x-6 mt-4">
           <a 
             href="https://www.facebook.com" 
