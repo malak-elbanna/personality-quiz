@@ -69,7 +69,7 @@ QuestionCard.propTypes = {
         c: PropTypes.string.isRequired,
         d: PropTypes.string.isRequired,
     }).isRequired,
-    onAnswer: PropTypes.func.isRequired, // Expecting a function to handle the selected answer
+    onAnswer: PropTypes.func.isRequired, 
 };
 
 export default QuestionCard;

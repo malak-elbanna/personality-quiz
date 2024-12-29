@@ -1,25 +1,14 @@
 import { useNavigate } from 'react-router-dom';
-import Navbar from '../components/Navbar'; 
-import Footer from '../components/Footer';
-
 const Signin = () => {
-  const navigate = useNavigate(); // Hook for navigation
+  const navigate = useNavigate(); 
 
   const handleSubmit = (e) => {
-    e.preventDefault(); // Prevent form submission
-
-    // Handle your sign-in logic here (e.g., form validation, API call)
-    
-    // Redirect to the Home page after successful sign-in
+    e.preventDefault(); 
     navigate('/'); 
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-purple-100 text-gray-800 font-sans">
-      {/* Navbar */}
-      <Navbar />
-
-      {/* Sign In Section */}
+    <div className="flex flex-col min-h-screen bg-purple-100 text-gray-800 font-sans">     
       <section className="bg-white py-16 flex-grow">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-semibold text-purple-700 mb-4">Sign in</h2>
@@ -55,8 +44,7 @@ const Signin = () => {
         </div>
       </section>
 
-      {/* Footer (optional) */}
-      <Footer />
+      
     </div>
   );
 };

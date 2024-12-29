@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Doughnut } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend, Title } from "chart.js";
 import { useLocation, useNavigate } from "react-router-dom";
-import ChartDataLabels from "chartjs-plugin-datalabels"; 
-
+import ChartDataLabels from "chartjs-plugin-datalabels";
 
 ChartJS.register(ArcElement, Tooltip, Legend, Title, ChartDataLabels);
 
@@ -26,9 +25,8 @@ const Results = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  let quizId = location.state?.quizId; // Try to get quizId from location.state
+  let quizId = location.state?.quizId;
 
-  // If quizId is not found in location.state, attempt to retrieve quizId from localStorage
   if (!quizId) {
     const availableQuizzes = ["quiz1", "quiz2", "quiz3"];
     for (let i = 0; i < availableQuizzes.length; i++) {
@@ -53,7 +51,6 @@ const Results = () => {
       return;
     }
 
-    // Calculate scores
     const totalScores = {
       openness: 0,
       neuroticism: 0,
@@ -86,7 +83,6 @@ const Results = () => {
 
     setPercentage(adjustedPercentages);
 
-    // Determine the biggest trait
     const maxTrait = Object.keys(adjustedPercentages).reduce((max, trait) => {
       return adjustedPercentages[trait] > adjustedPercentages[max] ? trait : max;
     }, "openness");
@@ -106,8 +102,8 @@ const Results = () => {
           percentage.conscientiousness || 0,
         ],
         backgroundColor: [
-           "#BB6FF0", "#FFB6C1", "#FFEB8D", "#A0D8FF", "#A8E6A1"
-        ], // Shades of purple, pink, yellow, blue
+          "#BB6FF0", "#FFB6C1", "#FFEB8D", "#A0D8FF", "#A8E6A1"
+        ],
         borderWidth: 0,
       },
     ],
@@ -115,12 +111,9 @@ const Results = () => {
 
   const handleRetake = () => {
     if (quizId) {
-      // Clear stored data
       localStorage.removeItem(`${quizId}_completed`);
       localStorage.removeItem(`${quizId}_answers`);
-
-      // Navigate to the corresponding quiz page
-      navigate(`/quiz/${quizId.replace(/\D/g, "")}`); // Extract quiz number from quizId
+      navigate(`/quiz/${quizId.replace(/\D/g, "")}`);
     } else {
       console.error("Quiz ID is missing. Unable to retake quiz.");
     }
@@ -129,15 +122,20 @@ const Results = () => {
   return (
     <div className="min-h-screen bg-white py-16 px-12 mt-20">
       <h1 className="text-5xl font-extrabold text-purple-700 mb-6 text-left">Your Quiz Results</h1>
-      <div className="w-96 h-96 mb-12 mx-auto rounded-lg">
+      
+      <div className="w-96 h-96 mb-8 mx-auto rounded-lg shadow-lg shadow-purple-600">
         <Doughnut data={data} />
       </div>
-      <h1 className="text-5xl font-extrabold bg-gradient-to-r from-pink-500 via-indigo-600 to-yellow-500 text-transparent bg-clip-text mb-8 text-center w-full">
-      Your main trait is: {biggestTrait.charAt(0).toUpperCase() + biggestTrait.slice(1)}
+
+      <h1 className="text-5xl font-extrabold bg-gradient-to-r from-pink-400 via-gray-500 to-yellow-500 text-transparent bg-clip-text mb-8 text-center">
+        Your main trait is:
+      </h1>
+      <h1 className="text-7xl font-extrabold bg-gradient-to-r from-pink-400 via-yellow-500 to-blue-500 text-transparent bg-clip-text mb-6 mt-3 text-center">
+          {biggestTrait.charAt(0).toUpperCase() + biggestTrait.slice(1)}
       </h1>
 
       <div className="py-8 px-12 mb-12 bg-white rounded-lg shadow-lg">
-        <div className="mb-8">
+        <div className="mb-8 mt-8">
           <p className="text-xl text-purple-900 font-semibold">
             Openness: <span className="font-bold text-purple-700">{percentage.openness}%</span> <br />
             Neuroticism: <span className="font-bold text-purple-700">{percentage.neuroticism}%</span> <br />
@@ -146,19 +144,19 @@ const Results = () => {
             Conscientiousness: <span className="font-bold text-purple-700">{percentage.conscientiousness}%</span>.
           </p>
         </div>
-        <div className="bg-gray-100 p-4 rounded-lg shadow-md">
-          <h2 className="text-lg font-bold text-purple-700 mb-4">Trait Descriptions:</h2>
+
+        <h2 className="text-xl font-bold text-purple-700 mb-6">Trait Descriptions:</h2>
+        <div className="text-xl py-8 px-12 mb-12 pl-5 bg-white rounded-lg">
           <ul>
-         <li><strong style={{ color: "#8A2BE2" }}>Openness:</strong> Describes the extent to which you are imaginative and curious.</li>
-         <li><strong style={{ color: "#FF66B2" }}>Neuroticism:</strong> Indicates how prone you are to stress and emotional instability.</li>
-         <li><strong style={{ color: "#FFEB3B" }}>Agreeableness:</strong> Measures your ability to be compassionate and cooperative.</li>
-         <li><strong style={{ color: "#2196F3" }}>Extraversion:</strong> Reflects your level of social interaction and enthusiasm.</li>
-         <li><strong style={{ color: "#4CAF50" }}>Conscientiousness:</strong> Shows how reliable, organized, and goal-oriented you are.</li>
-         </ul>
-
-
+            <li><strong style={{ color: "#8A2BE2" }}>Openness:</strong> Describes the extent to which you are imaginative and curious.</li>
+            <li><strong style={{ color: "#FF66B2" }}>Neuroticism:</strong> Indicates how prone you are to stress and emotional instability.</li>
+            <li><strong style={{ color: "#FFEB3B" }}>Agreeableness:</strong> Measures your ability to be compassionate and cooperative.</li>
+            <li><strong style={{ color: "#2196F3" }}>Extraversion:</strong> Reflects your level of social interaction and enthusiasm.</li>
+            <li><strong style={{ color: "#4CAF50" }}>Conscientiousness:</strong> Shows how reliable, organized, and goal-oriented you are.</li>
+          </ul>
         </div>
       </div>
+
       <div className="flex justify-start mb-12">
         <button
           className="px-8 py-3 bg-purple-700 text-white font-semibold rounded-lg hover:bg-purple-800 transition duration-300 transform hover:scale-105"

@@ -35,13 +35,13 @@ const Navbar = () => {
           Sign Up
         </button>
         
-        {/* Mobile Menu Button */}
+      
         <button className="md:hidden text-purple-600 ml-4" onClick={toggleMenu}>
           ☰
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      
       {menuActive && (
         <div className="md:hidden bg-white text-purple-600 absolute top-16 left-0 w-full p-4">
           <div className="flex flex-col space-y-4">

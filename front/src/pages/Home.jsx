@@ -2,7 +2,7 @@ import Navbar from '../components/Navbar';
 import HeroCarousel from '../components/HeroCarousel';
 import Statistics from '../components/Statistics';
 import { Link } from "react-router-dom";
-import SignUp from './SignUp';
+
 
 const Home = () => {
   return (
@@ -10,12 +10,12 @@ const Home = () => {
       {/* Navbar */}
       <Navbar />
 
-      {/* Hero Section with Carousel */}
+      {/* Hero Section  */}
       <section className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]">
         <HeroCarousel />
       </section>
 
-      {/* Welcome Section */}
+      {/* Welcome */}
       <section className="bg-white py-12 sm:py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl sm:text-4xl font-semibold text-purple-700 mb-4">Welcome to Quizzy!</h2>
@@ -31,7 +31,7 @@ const Home = () => {
         </div>
       </section>
         
-      {/* Call to Action (CTA) Section */}
+      {/*  (CTA) */}
       <section className="bg-white py-12 sm:py-16 text-purple-700">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl sm:text-4xl font-semibold mb-4">Ready to Discover More?</h2>
@@ -47,7 +47,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Statistics Section */}
+      {/* Statistics */}
       <section className="bg-purple-50 py-12 sm:py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 text-purple-700">Site Statistics</h2>

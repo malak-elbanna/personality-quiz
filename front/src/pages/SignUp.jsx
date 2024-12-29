@@ -12,7 +12,7 @@ const SignUp = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Password validation
+ 
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
     if (!passwordRegex.test(password)) {
       setMessage('Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character.');
@@ -26,7 +26,6 @@ const SignUp = () => {
     if (userExists) {
       setMessage('User already exists.');
     } else {
-      // Add the new user to local storage
       const newUser = { name, email, password, phone };
       existingUsers.push(newUser);
       localStorage.setItem('users', JSON.stringify(existingUsers));
@@ -36,7 +35,6 @@ const SignUp = () => {
 
   return (
     <div className="flex flex-col min-h-screen bg-purple-100 text-gray-800 font-sans">
-      {/* Sign Up Section */}
       <section className="bg-white py-16 flex-grow">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-semibold text-purple-700 mb-4">Sign Up</h2>
@@ -109,7 +107,6 @@ const SignUp = () => {
             </button>
           </form>
 
-          {/* Sign In Link */}
           <div className="mt-6">
             <p className="text-lg text-purple-600">
               Already have an account?{' '}
@@ -119,7 +116,6 @@ const SignUp = () => {
             </p>
           </div>
 
-          {/* Message */}
           {message && <p className="mt-4 text-purple-700">{message}</p>}
         </div>
       </section>

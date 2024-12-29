@@ -15,12 +15,11 @@ const Quiz2 = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Load quiz questions
+    
     setQuiz(Quiz2JSON);
   
-    // Check if the quiz has been completed
     if (hasCompletedQuiz) {
-      navigate("/quiz/2"); // Replace with the specific quiz page URL
+      navigate("/quiz/2"); 
     }
   }, [hasCompletedQuiz, navigate]);
   

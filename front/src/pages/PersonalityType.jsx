@@ -70,7 +70,7 @@ const PersonalityType = () => {
     }
   ];
 
-  // Create a reference for the slider
+ 
   const sliderRef = useRef(null);
 
   const settings = {
@@ -87,7 +87,7 @@ const PersonalityType = () => {
       <main className="flex-grow container mx-auto px-4 py-16 text-center mt-10">
         <h1 className="text-4xl font-semibold text-purple-700 mb-8">Personality Types</h1>
         <div className="relative">
-          {/* Custom previous arrow */}
+         
           <button
             onClick={() => sliderRef.current.slickPrev()}
             className="absolute top-1/3 left-4 transform -translate-y-1/2 text-purple-600 text-3xl sm:text-4xl md:text-5xl lg:text-6xl z-10"
@@ -114,7 +114,7 @@ const PersonalityType = () => {
             ))}
           </Slider>
 
-          {/* Custom next arrow */}
+         
           <button
             onClick={() => sliderRef.current.slickNext()}
             className="absolute top-1/3 right-4 transform -translate-y-1/2 text-purple-600 text-3xl sm:text-4xl md:text-5xl lg:text-6xl z-10"

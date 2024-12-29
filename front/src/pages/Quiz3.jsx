@@ -17,9 +17,9 @@ const Quiz3 = () => {
   useEffect(() => {
     setQuiz(Quiz3JSON);
   
-    // Check if the quiz has been completed
+   
     if (hasCompletedQuiz) {
-      navigate("/quiz/3"); // Replace with the specific quiz page URL
+      navigate("/quiz/3"); 
     }
   }, [hasCompletedQuiz, navigate]);
   

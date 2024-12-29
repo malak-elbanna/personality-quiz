@@ -29,10 +29,10 @@ const Success = () => {
 
   const handleViewResults = () => {
     if (quizId) {
-      navigate("/results", { state: { quizId } }); // Pass quizId correctly
+      navigate("/results", { state: { quizId } });
     } else {
       console.warn("Quiz ID is missing. Redirecting to results for quiz1.");
-      navigate("/results", { state: { quizId: "quiz1" } }); // Fallback to quiz1 if missing
+      navigate("/results", { state: { quizId: "quiz1" } }); 
     }
   };
 
