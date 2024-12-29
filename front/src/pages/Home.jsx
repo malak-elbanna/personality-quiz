@@ -3,10 +3,9 @@ import HeroCarousel from '../components/HeroCarousel';
 import Statistics from '../components/Statistics';
 import { Link } from "react-router-dom";
 
-
 const Home = () => {
   return (
-    <div className="flex flex-col min-h-screen bg-purple-100 text-gray-800 font-sans">
+    <div className="flex flex-col min-h-screen bg-purple-100 text-gray-800 font-sans overflow-x-hidden">
       {/* Navbar */}
       <Navbar />
 
@@ -17,7 +16,7 @@ const Home = () => {
 
       {/* Welcome */}
       <section className="bg-white py-12 sm:py-16">
-        <div className="container mx-auto px-4 text-center">
+        <div className="container mx-auto px-4 max-w-7xl text-center">
           <h2 className="text-3xl sm:text-4xl font-semibold text-purple-700 mb-4">Welcome to Quizzy!</h2>
           <p className="text-lg sm:text-xl text-purple-600 mb-8">
             Explore our wide range of fun, insightful personality quizzes. Uncover hidden truths about yourself, and share the experience with friends!
@@ -31,9 +30,9 @@ const Home = () => {
         </div>
       </section>
         
-      {/*  (CTA) */}
+      {/* Call-to-Action (CTA) */}
       <section className="bg-white py-12 sm:py-16 text-purple-700">
-        <div className="container mx-auto px-4 text-center">
+        <div className="container mx-auto px-4 max-w-7xl text-center">
           <h2 className="text-3xl sm:text-4xl font-semibold mb-4">Ready to Discover More?</h2>
           <p className="text-lg sm:text-xl mb-8">
             Take our fun quizzes now and unlock your personality profile. What are you waiting for? Dive in!
@@ -49,11 +48,14 @@ const Home = () => {
 
       {/* Statistics */}
       <section className="bg-purple-50 py-12 sm:py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 text-purple-700">Site Statistics</h2>
-          <Statistics />
-        </div>
-      </section>
+  <div className="container mx-auto px-4 max-w-7xl">
+    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8 text-purple-700">
+      Site Statistics
+    </h2>
+    <Statistics />
+  </div>
+</section>
+
     </div>
   );
 };
