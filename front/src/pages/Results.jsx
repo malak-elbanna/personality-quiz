@@ -120,46 +120,37 @@ const Results = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white py-16 px-12 mt-20">
-      <h1 className="text-5xl font-extrabold text-purple-700 mb-6 text-left">Your Quiz Results</h1>
-      
-      <div className="w-96 h-96 mb-8 mx-auto rounded-lg shadow-lg shadow-purple-600">
-        <Doughnut data={data} />
-      </div>
+   <div className="min-h-screen bg-white py-16 px-16 mt-20 md:mt-20 sm:mt-24 flex flex-col justify-center items-center">
+  <div className="text-3xl md:text-5xl font-extrabold text-purple-700 mb-8 text-center md:text-left">
+  <h1>Your Quiz Results</h1>
+  <div className="w-full max-w-sm sm:max-w-md md:max-w-lg mx-auto mt-6 md:mt-8">
+    <Doughnut data={data} />
+  </div>
+</div>
 
-      <h1 className="text-5xl font-extrabold bg-gradient-to-r from-pink-400 via-gray-500 to-yellow-500 text-transparent bg-clip-text mb-8 text-center">
+
+
+      <h1 className="text-2xl md:text-5xl font-extrabold bg-gradient-to-r from-pink-400 via-gray-500 to-yellow-500 text-transparent bg-clip-text mb-8 mt-8 text-center">
         Your main trait is:
+
       </h1>
-      <h1 className="text-7xl font-extrabold bg-gradient-to-r from-pink-400 via-yellow-500 to-blue-500 text-transparent bg-clip-text mb-6 mt-3 text-center">
+      <h1 className="text-4xl md:text-7xl font-extrabold bg-gradient-to-r from-pink-400 via-yellow-500 to-blue-500 text-transparent bg-clip-text mb-6 mt-8 text-center">
           {biggestTrait.charAt(0).toUpperCase() + biggestTrait.slice(1)}
       </h1>
 
-      <div className="py-8 px-12 mb-12 bg-white rounded-lg shadow-lg">
-        <div className="mb-8 mt-8">
-          <p className="text-xl text-purple-900 font-semibold">
-            Openness: <span className="font-bold text-purple-700">{percentage.openness}%</span> <br />
-            Neuroticism: <span className="font-bold text-purple-700">{percentage.neuroticism}%</span> <br />
-            Agreeableness: <span className="font-bold text-purple-700">{percentage.agreeableness}%</span> <br />
-            Extraversion: <span className="font-bold text-purple-700">{percentage.extraversion}%</span> <br />
-            Conscientiousness: <span className="font-bold text-purple-700">{percentage.conscientiousness}%</span>.
-          </p>
-        </div>
-
-        <h2 className="text-xl font-bold text-purple-700 mb-6">Trait Descriptions:</h2>
-        <div className="text-xl py-8 px-12 mb-12 pl-5 bg-white rounded-lg">
-          <ul>
-            <li><strong style={{ color: "#8A2BE2" }}>Openness:</strong> Describes the extent to which you are imaginative and curious.</li>
-            <li><strong style={{ color: "#FF66B2" }}>Neuroticism:</strong> Indicates how prone you are to stress and emotional instability.</li>
-            <li><strong style={{ color: "#FFEB3B" }}>Agreeableness:</strong> Measures your ability to be compassionate and cooperative.</li>
-            <li><strong style={{ color: "#2196F3" }}>Extraversion:</strong> Reflects your level of social interaction and enthusiasm.</li>
-            <li><strong style={{ color: "#4CAF50" }}>Conscientiousness:</strong> Shows how reliable, organized, and goal-oriented you are.</li>
-          </ul>
-        </div>
+      <div className="py-8 px-4 md:px-12 mb-12 bg-white rounded-lg shadow-lg">
+        <p className="text-sm md:text-xl text-purple-900 font-semibold leading-7">
+          Openness: <span className="font-bold text-purple-700">{percentage.openness}%</span> <br />
+          Neuroticism: <span className="font-bold text-purple-700">{percentage.neuroticism}%</span> <br />
+          Agreeableness: <span className="font-bold text-purple-700">{percentage.agreeableness}%</span> <br />
+          Extraversion: <span className="font-bold text-purple-700">{percentage.extraversion}%</span> <br />
+          Conscientiousness: <span className="font-bold text-purple-700">{percentage.conscientiousness}%</span>.
+        </p>
       </div>
 
-      <div className="flex justify-start mb-12">
+      <div className="flex justify-center md:justify-start">
         <button
-          className="px-8 py-3 bg-purple-700 text-white font-semibold rounded-lg hover:bg-purple-800 transition duration-300 transform hover:scale-105"
+          className="px-6 py-2 md:px-8 md:py-3 bg-purple-700 text-white font-semibold rounded-lg hover:bg-purple-800 transition duration-300 transform hover:scale-105"
           onClick={handleRetake}
         >
           Retake Quiz
