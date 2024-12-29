@@ -55,7 +55,7 @@ const Quiz1 = () => {
   return hasCompletedQuiz ? (
     <div className="bg-gradient-to-r from-indigo-500 to-purple-500 min-h-screen flex flex-col items-center justify-center text-center text-white">
       <h1 className="text-4xl font-bold mb-4">You already took this quiz!</h1>
-      <p className="text-lg mb-8">Feel free to retake it if you'd like.</p>
+      <p className="text-lg mb-8">Feel free to retake it if you would like.</p>
       <button
         onClick={handleRetake}
         className="px-8 py-3 bg-purple-700 text-white font-semibold rounded-lg hover:bg-purple-800 transition duration-300 transform hover:scale-105"

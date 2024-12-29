@@ -2,11 +2,13 @@ import { useEffect, useState } from 'react';
 import { Search } from 'lucide-react';
 import QuizCard from '../components/QuizCard';
 import QuizJSON from '../data/quizzes.json';
+import { useNavigate } from "react-router-dom";
 
 const QuizCollection = () => {
   const [quizzes, setQuizzes] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredQuizzes, setFilteredQuizzes] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setQuizzes(QuizJSON);
@@ -28,6 +30,13 @@ const QuizCollection = () => {
         <p className="text-lg font-light">
           Discover and challenge yourself with our collection of engaging quizzes
         </p>
+
+        <button
+          className="mt-10 mb-6 px-20 py-3 bg-white text-indigo-500 font-semibold rounded-xl hover:bg-slate-100 hover:text-purple-500 transition duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50"
+          onClick={() => navigate("/quiz-history")}
+        >
+          View Quiz History
+        </button>
       </div>
 
       <main className="container mx-auto px-4 py-8 flex-1 w-full flex flex-col items-center">
@@ -51,7 +60,11 @@ const QuizCollection = () => {
         {filteredQuizzes.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full">
             {filteredQuizzes.map(quiz => (
-              <QuizCard key={quiz.id} quiz={quiz} />
+              <QuizCard 
+                key={quiz.id} 
+                quiz={quiz} 
+                onButtonClick={() => navigate(`/quiz/${quiz.id}`)} 
+              />
             ))}
           </div>
         ) : (
